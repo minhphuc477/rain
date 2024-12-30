@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import joblib
 import numpy as np
 from flask_cors import CORS
@@ -8,6 +8,10 @@ CORS(app)  # Enable CORS
 
 # Load the model
 model = joblib.load('best_logistic_model.pkl')
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():

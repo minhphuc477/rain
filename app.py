@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # Load the model
-model = joblib.load('best_logistic_model.pkl')
+model = joblib.load('weather_prediction_model.pkl')
 
 @app.route('/')
 def home():

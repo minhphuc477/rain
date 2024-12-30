@@ -15,15 +15,16 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    print("Request received")
     data = request.get_json()
+    
     features = [
         data.get('tempmax'), data.get('tempmin'), data.get('temp'), 
         data.get('dew'), data.get('humidity'), data.get('windgust'), data.get('windspeed'), data.get('winddir'), data.get('sealevelpressure'),
         data.get('cloudcover'), data.get('visibility'), data.get('solarradiation'), data.get('solarenergy'), data.get('uvindex'),
-        data.get('day'), data.get('month')
+        data.get('day'), data.get('month'), data.get('year')
     ]
     features = np.array(features).reshape(1, -1)
+    
     prediction = model.predict(features)
     return jsonify({'prediction': 'rain' if prediction[0] == 1 else 'no rain'})
 

@@ -51,7 +51,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Weather Prediction (if you do not input the file then you need to input all the fields)</h1>
+        <h1>Weather Prediction (Input either JSON file or all fields)</h1>
         <form id="predictionForm">
             <label for="jsonFile">Upload JSON File</label>
             <input type="file" id="jsonFile" name="jsonFile" accept=".json">
@@ -87,6 +87,8 @@
             <input type="number" id="day" name="day">
             <label for="month">Month</label>
             <input type="number" id="month" name="month">
+            <label for="year">Year</label>
+            <input type="number" id="year" name="year">
             <button type="button" id="predictButton">Predict</button>
         </form>
         <div class="result" id="result"></div>

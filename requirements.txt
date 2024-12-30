@@ -2,3 +2,4 @@ flask
 joblib
 numpy
 flask-cors
+gunicorn

@@ -1,0 +1,18 @@
+{
+    "tempmax": 30,
+    "tempmin": 20,
+    "temp": 25,
+    "dew": 18,
+    "humidity": 60,
+    "windgust": 15,
+    "windspeed": 10,
+    "winddir": 180,
+    "sealevelpressure": 1012,
+    "cloudcover": 50,
+    "visibility": 10,
+    "solarradiation": 200,
+    "solarenergy": 5,
+    "uvindex": 7,
+    "day": 15,
+    "month": 6
+}
